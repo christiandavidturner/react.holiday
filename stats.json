@@ -4,10 +4,6 @@
       "component---src-pages-index-js-2777ead3874493638c16.js",
       "component---src-pages-index-js-2777ead3874493638c16.js.map"
     ],
-    "path---2017-2": [
-      "path---2017-2-95485d39fe9375d9faff.js",
-      "path---2017-2-95485d39fe9375d9faff.js.map"
-    ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
@@ -25,8 +21,8 @@
       "component---src-layouts-index-js-98fc22d23d31a3d59608.js.map"
     ],
     "path---index": [
-      "path---index-b56a655d524e52056b31.js",
-      "path---index-b56a655d524e52056b31.js.map"
+      "path---index-1e9d01947517a6ba2f90.js",
+      "path---index-1e9d01947517a6ba2f90.js.map"
     ],
     "commons": [
       "commons-89d60b5b924ef4c6771c.js",
@@ -43,9 +39,9 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-f606e722a6c0bd0eb656.js",
+      "app-de2038d90f71153e08f5.js",
       "build-js-styles.css",
-      "app-f606e722a6c0bd0eb656.js.map",
+      "app-de2038d90f71153e08f5.js.map",
       "build-js-styles.css.map"
     ],
     "path---about": [

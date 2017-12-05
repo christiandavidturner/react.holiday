@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Tue, 05 Dec 2017 04:01:10 GMT</lastBuildDate><item><title><![CDATA[Day 1: Hello 🎄]]></title><description><![CDATA[Back in the  C  days, pragrams had a  main()  function. This is where they
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Tue, 05 Dec 2017 04:12:29 GMT</lastBuildDate><item><title><![CDATA[Day 1: Hello 🎄]]></title><description><![CDATA[Back in the  C  days, pragrams had a  main()  function. This is where they
 started. React web projects are similar; They start with…]]></description><link>https://react.holiday/2017/1/</link><guid isPermaLink="false">https://react.holiday/2017/1/</guid><pubDate>Fri, 01 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;Back in the &lt;code&gt;C&lt;/code&gt; days, pragrams had a &lt;code&gt;main()&lt;/code&gt; function. This is where they
 started.&lt;/p&gt;
@@ -20,21 +20,6 @@ mount them into the DOM.&lt;/p&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;h2&gt;Tinker with it&lt;/h2&gt;
-&lt;/div&gt;
-&lt;iframe src=&quot;https://codesandbox.io/embed/l396jqvnoz&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden; border: 1px solid black&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 2: JSX Lyfe]]></title><description><![CDATA[Most React apps use  JSX .
-A lot of folks make hay about JSX but it isn’t warrented. JSX is a convenience.
-It makes these lines equivalent…]]></description><link>https://react.holiday/2017/2/</link><guid isPermaLink="false">https://react.holiday/2017/2/</guid><pubDate>Fri, 01 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Most React apps use &lt;a href=&quot;https://facebook.github.io/jsx/&quot;&gt;JSX&lt;/a&gt;.
-A lot of folks make hay about JSX but it isn’t warrented.&lt;/p&gt;
-&lt;p&gt;JSX is a convenience.
-It makes these lines equivalent.&lt;/p&gt;
-&lt;div class=&quot;measure&quot;&gt;
-```jsx
-// No JSX
-createElement(&quot;h1&quot;, {}, &quot;Hello 🎄&quot;)
-&lt;p&gt;// Yes JSX&lt;/p&gt;
-&lt;h1&gt;Hello 🎄&lt;/h1&gt;
-```
 &lt;h2&gt;Tinker with it&lt;/h2&gt;
 &lt;/div&gt;
 &lt;iframe src=&quot;https://codesandbox.io/embed/l396jqvnoz&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden; border: 1px solid black&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[About]]></title><description><![CDATA[Why? I don’t know. I think most React education is pathelogically complicated and I like the
