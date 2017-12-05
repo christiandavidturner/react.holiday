@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Tue, 05 Dec 2017 15:01:33 GMT</lastBuildDate><item><title><![CDATA[Day 5: Components can use classes for special powers]]></title><description><![CDATA[Some components have to be special.
-Those components get defined with  class . Defining a component class Component classes extend  React…]]></description><link>https://react.holiday/2017/5/</link><guid isPermaLink="false">https://react.holiday/2017/5/</guid><pubDate>Tue, 05 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Tue, 05 Dec 2017 16:16:42 GMT</lastBuildDate><item><title><![CDATA[Day 5: Components can use classes for special powers]]></title><description><![CDATA[Some components have to be special.
+Those components get defined with  class . Some ground rules All component classes extend  React…]]></description><link>https://react.holiday/2017/5/</link><guid isPermaLink="false">https://react.holiday/2017/5/</guid><pubDate>Tue, 05 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;Some components have to be special.
 Those components get defined with &lt;strong&gt;class&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
@@ -14,12 +14,9 @@ Those components get defined with &lt;strong&gt;class&lt;/strong&gt;.&lt;/p&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;h2&gt;Defining a component class&lt;/h2&gt;
-&lt;p&gt;Component classes extend &lt;code&gt;React.Component&lt;/code&gt; and &lt;strong&gt;must&lt;/strong&gt; define a &lt;code&gt;render()&lt;/code&gt; method.&lt;/p&gt;
-&lt;h2&gt;What speshul powerz they got?!&lt;/h2&gt;
-&lt;p&gt;Unlike function components, class componets have an instance—&lt;code&gt;this&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;This changes the way you author component classes.
-For comparison, here’s what &lt;code&gt;Greeting&lt;/code&gt; looks like as a component class.&lt;/p&gt;
+&lt;h2&gt;Some ground rules&lt;/h2&gt;
+&lt;p&gt;All component classes extend &lt;code&gt;React.Component&lt;/code&gt; and define a &lt;code&gt;render()&lt;/code&gt; method.&lt;/p&gt;
+&lt;p&gt;For comparison, here’s what &lt;code&gt;Greeting&lt;/code&gt; looks like as a component class.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Greeting&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Component&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -30,33 +27,34 @@ For comparison, here’s what &lt;code&gt;Greeting&lt;/code&gt; looks like as a 
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;This instance will be the cornerstone of everything interactive features we add in the weeks to come.&lt;/p&gt;
-&lt;p&gt;NO PEAKING!&lt;/p&gt;
+&lt;h2&gt;What speshul powerz they got?!&lt;/h2&gt;
+&lt;p&gt;Unlike function components, class components have an instance—&lt;code&gt;this&lt;/code&gt;. This gives us &lt;a href=&quot;https://reactjs.org/docs/react-component.html&quot;&gt;lifecycle methods and state APIs&lt;/a&gt; for some seriously cool interactivity.&lt;/p&gt;
+&lt;p&gt;Sooooooo much ahead!&lt;/p&gt;
 &lt;h2&gt;Tinker with it&lt;/h2&gt;
-&lt;p&gt;Use the window below play with component classes.&lt;/p&gt;
+&lt;p&gt;Use the workspace below and play with component classes.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Convert &lt;code&gt;Greeting&lt;/code&gt; to a component class and back to a function.&lt;/li&gt;
 &lt;li&gt;Define a new component using class. Be sure not to forget &lt;code&gt;extends&lt;/code&gt;, &lt;code&gt;render()&lt;/code&gt; and &lt;code&gt;this&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;iframe src=&quot;https://codesandbox.io/embed/mny86kooy&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 4: Props are function arguments]]></title><description><![CDATA[If components are functions and functions take arguments,
-components should take arguments. They do! In React we call these arguments  props…]]></description><link>https://react.holiday/2017/4/</link><guid isPermaLink="false">https://react.holiday/2017/4/</guid><pubDate>Mon, 04 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+components should take arguments. They do! In React we call component arguments…]]></description><link>https://react.holiday/2017/4/</link><guid isPermaLink="false">https://react.holiday/2017/4/</guid><pubDate>Mon, 04 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;If components are functions and functions take arguments,
 components should take arguments.&lt;/p&gt;
 &lt;p&gt;They do!&lt;/p&gt;
-&lt;p&gt;In React we call these arguments &lt;code&gt;props&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In React we call component arguments &lt;code&gt;props&lt;/code&gt;.&lt;/p&gt;
 &lt;h2&gt;Where do props come from?&lt;/h2&gt;
 &lt;p&gt;Props are authored like HTML attributes.
 Say you want to add a &lt;code&gt;name&lt;/code&gt; prop.
-Simply add it as an “attribute” on your component:&lt;/p&gt;
+Add it as an “attribute” where you use the component:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Greeting&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;bulbasaur&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;h2&gt;Now how do I use ‘em?&lt;/h2&gt;
-&lt;p&gt;React puts all&lt;super&gt;&lt;small&gt;*&lt;/small&gt;&lt;/super&gt; props in a single object.
-So you only need to take that first argument.&lt;/p&gt;
-&lt;p&gt;Once you have the props object, you can interpolate values in JSX with &lt;code&gt;{}&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Now how do I use ‘em &lt;em&gt;in&lt;/em&gt; the component?&lt;/h2&gt;
+&lt;p&gt;React puts &lt;code&gt;props&lt;/code&gt; in a single object.
+And that object is the, conveniently, the first argument of our component function.&lt;/p&gt;
+&lt;p&gt;Once you have the &lt;code&gt;props&lt;/code&gt; object, you can interpolate values in with &lt;code&gt;{}&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Greeting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Hello &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -64,13 +62,15 @@ So you only need to take that first argument.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;h2&gt;Tinker with it&lt;/h2&gt;
-&lt;p&gt;Use the window below play with props.&lt;/p&gt;
+&lt;p&gt;Use the workspace below and play with props.&lt;/p&gt;
 &lt;p&gt;Be creative and have fun!&lt;/p&gt;
 &lt;/div&gt;
-&lt;iframe src=&quot;https://codesandbox.io/embed/vm2mpv06zy&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 3: Components are functions]]></title><description><![CDATA[Components are just functions. 🤯 How do I write said component functions? How do I use said component functions? That’s it? Pretty much…]]></description><link>https://react.holiday/2017/3/</link><guid isPermaLink="false">https://react.holiday/2017/3/</guid><pubDate>Sun, 03 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/vm2mpv06zy&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 3: Components are functions]]></title><description><![CDATA[Components are just functions. 🤯 How do I write said component functions? Easy. here’s one that spits out our  Hello 🎄  wherever used. How…]]></description><link>https://react.holiday/2017/3/</link><guid isPermaLink="false">https://react.holiday/2017/3/</guid><pubDate>Sun, 03 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;Components are just functions.&lt;/p&gt;
 &lt;p&gt;&lt;span style=&quot;font-size: 3em&quot;&gt;🤯&lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;How do I write said component functions?&lt;/h3&gt;
+&lt;p&gt;Easy.&lt;/p&gt;
+&lt;p&gt;here’s one that spits out our &lt;code&gt;Hello 🎄&lt;/code&gt; wherever used.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Greeting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Hello 🎄&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -78,26 +78,27 @@ So you only need to take that first argument.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;h3&gt;How do I use said component functions?&lt;/h3&gt;
+&lt;p&gt;JSX has you covered.
+Just use the function name like an HTML tag.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Greeting&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Greeting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Greeting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;h3&gt;That’s it?&lt;/h3&gt;
-&lt;p&gt;Pretty much.&lt;/p&gt;
-&lt;p&gt;Just remember to capitalize your custom components.
-If you don’t, JSX will assume that you meant a native DOM element.&lt;/p&gt;
+&lt;p&gt;Pretty much but here’s something to remember:&lt;/p&gt;
+&lt;p&gt;Capitalize your custom components.
+If you don’t, JSX transformers assume you meant a native DOM element.&lt;/p&gt;
 &lt;h2&gt;Tinker with it&lt;/h2&gt;
-&lt;p&gt;Use the window below play with custom components.&lt;/p&gt;
+&lt;p&gt;Use the workspace below to play with components.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Write and use a component of your own creation.&lt;/li&gt;
-&lt;li&gt;Try mixing custom components and native components.&lt;/li&gt;
+&lt;li&gt;Mix custom components and native components. Any issues?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;iframe src=&quot;https://codesandbox.io/embed/4jr7znmkm9&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 2: JSX 4LYFE]]></title><description><![CDATA[People like to make hay about  JSX . Don’t get your undies in a bunched over it. All it does is make these two lines
-equivalent: How does…]]></description><link>https://react.holiday/2017/2/</link><guid isPermaLink="false">https://react.holiday/2017/2/</guid><pubDate>Sat, 02 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/4jr7znmkm9&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 2: JSX 4LYFE]]></title><description><![CDATA[People like to make hay about  JSX . Don’t get your undies in a bunched. All it does is make these two lines equivalent: How does HTML work…]]></description><link>https://react.holiday/2017/2/</link><guid isPermaLink="false">https://react.holiday/2017/2/</guid><pubDate>Sat, 02 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;People like to make hay about &lt;a href=&quot;https://facebook.github.io/jsx/&quot;&gt;JSX&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Don’t get your undies in a bunched over it. All it does is make these two lines
-equivalent:&lt;/p&gt;
+&lt;p&gt;Don’t get your undies in a bunched. All it does is make these two lines equivalent:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token comment&quot;&gt;// No-JSX&lt;/span&gt;
 React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;h1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Hello 🎄&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -106,19 +107,22 @@ React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span clas
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Hello 🎄&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;h3&gt;How does HTML in JavaScript work?&lt;/h3&gt;
-&lt;p&gt;Don’t think of it like HTML and you’ll be happier; it isn’t.&lt;/p&gt;
-&lt;p&gt;JSX must be transformed to the &lt;code&gt;React.createElement()&lt;/code&gt; calls before the browser
-can run it. Apps use libraries like &lt;a href=&quot;http://babeljs.io/&quot;&gt;Babel&lt;/a&gt; or
-&lt;a href=&quot;http://www.typescriptlang.org/&quot;&gt;TypeScript&lt;/a&gt; to handle the code transformation.&lt;/p&gt;
+&lt;h3&gt;How does HTML work in JavaScript?&lt;/h3&gt;
+&lt;p&gt;Don’t think of it like HTML, it isn’t.&lt;/p&gt;
+&lt;p&gt;JSX is just a authoring nice-to-have.
+But it’s not something that works in the browser.
+It must be transformed to &lt;code&gt;React.createElement()&lt;/code&gt; calls before the browser can run it.
+Most apps use projects like &lt;a href=&quot;http://babeljs.io/&quot;&gt;Babel&lt;/a&gt; or
+&lt;a href=&quot;http://www.typescriptlang.org/&quot;&gt;TypeScript&lt;/a&gt; to handle that.&lt;/p&gt;
 &lt;h3&gt;Why JSX?&lt;/h3&gt;
-&lt;p&gt;JSX is optional but it has community consensus. There’s a certain parity in
-describe React elements in a syntax similar to HTML.&lt;/p&gt;
+&lt;p&gt;JSX is optional but it has community consensus.
+There’s a certain harmony to spec’ing React elements in a syntax similar to HTML.&lt;/p&gt;
 &lt;h3&gt;Gotchas&lt;/h3&gt;
 &lt;p&gt;JSX isn’t all 🦄s and 🌈s.&lt;/p&gt;
-&lt;p&gt;Lowercase attributes like &lt;code&gt;class&lt;/code&gt;, &lt;code&gt;onclick&lt;/code&gt;, &lt;code&gt;autofocus&lt;/code&gt;, and &lt;code&gt;tabindex&lt;/code&gt; become
-camelCased &lt;code&gt;className&lt;/code&gt;, &lt;code&gt;onClick&lt;/code&gt;, &lt;code&gt;autoFocus&lt;/code&gt;, and &lt;code&gt;tabIndex&lt;/code&gt; respectively and
-can take any JS expression.&lt;/p&gt;
+&lt;p&gt;Lowercase attributes like &lt;code&gt;class&lt;/code&gt;, &lt;code&gt;onclick&lt;/code&gt;, &lt;code&gt;autofocus&lt;/code&gt;, and &lt;code&gt;tabindex&lt;/code&gt; become camelCased &lt;code&gt;className&lt;/code&gt;, &lt;code&gt;onClick&lt;/code&gt;, &lt;code&gt;autoFocus&lt;/code&gt;, and &lt;code&gt;tabIndex&lt;/code&gt; respectively.
+The can also take any JavaScript expression.&lt;/p&gt;
+&lt;p&gt;This takes time to get used to.
+The examples below are identical.&lt;/p&gt;
 &lt;h4&gt;HTML&lt;/h4&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-html&quot;&gt;&lt;code&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt;
@@ -154,27 +158,26 @@ can take any JS expression.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;h2&gt;Tinker with it&lt;/h2&gt;
-&lt;p&gt;Use the window below and play around with the JSX.&lt;/p&gt;
+&lt;p&gt;Use the workspace below and play with the JSX.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Try using &lt;code&gt;class&lt;/code&gt; instead of &lt;code&gt;className&lt;/code&gt;. What error do you get?&lt;/li&gt;
-&lt;li&gt;Nest a couple elements inside of each other. Did they render as expected? How
-would you write the same using &lt;code&gt;React.createElement()&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;Nest a couple elements inside of each other. Did they render as expected? How would you write the same using &lt;code&gt;React.createElement()&lt;/code&gt;?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;iframe src=&quot;https://codesandbox.io/embed/jnkm0pkm7v&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 1: Hello 🎄]]></title><description><![CDATA[In  C , programs have a  main()  function.
-It’s where programs starts. React web apps are similar; They start with  ReactDOM.render() . WTF…]]></description><link>https://react.holiday/2017/1/</link><guid isPermaLink="false">https://react.holiday/2017/1/</guid><pubDate>Fri, 01 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+It’s where programs starts. React apps are similar; on the web they start with  ReactDOM.render…]]></description><link>https://react.holiday/2017/1/</link><guid isPermaLink="false">https://react.holiday/2017/1/</guid><pubDate>Fri, 01 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;In &lt;code&gt;C&lt;/code&gt;, programs have a &lt;code&gt;main()&lt;/code&gt; function.
 It’s where programs starts.&lt;/p&gt;
-&lt;p&gt;React web apps are similar; They start with &lt;code&gt;ReactDOM.render()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;React apps are similar; on the web they start with &lt;code&gt;ReactDOM.render()&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;someReactComponent&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; someDOMNode&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;h3&gt;WTF is ReactDOM?&lt;/h3&gt;
-&lt;p&gt;React is used on a bunch of platforms.
-Web, mobile, desktop, VR—it’s all over the place.&lt;/p&gt;
-&lt;p&gt;Instead of stuffing all those smarts into one gigantic library,
-Platform-specific bits are split into plactform-specific labraries.&lt;/p&gt;
+&lt;p&gt;React is used all over—web, mobile, desktop, VR, appliances.
+Lots of places.&lt;/p&gt;
+&lt;p&gt;Instead of stuffing all those smarts into one enormous library,
+each platform has a partner library.&lt;/p&gt;
 &lt;p&gt;On the web, that’s &lt;code&gt;ReactDOM&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;We use &lt;code&gt;React&lt;/code&gt; to create components and &lt;code&gt;ReactDOM&lt;/code&gt; render them into the DOM.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
@@ -185,31 +188,31 @@ Platform-specific bits are split into plactform-specific labraries.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;h2&gt;Tinker with it&lt;/h2&gt;
-&lt;p&gt;Use the window below and play around with the &lt;code&gt;render()&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;Use the window below and play around with &lt;code&gt;render()&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Remove the import statements. What errors do you get?&lt;/li&gt;
+&lt;li&gt;Comment out the import statements. What errors do you get?&lt;/li&gt;
 &lt;li&gt;Change the component type to something other than &lt;code&gt;h1&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Put some values in that empty object. What happens? What errors do you get?&lt;/li&gt;
+&lt;li&gt;Put some values in the empty object (second argument). What happens? What errors do you get?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;iframe src=&quot;https://codesandbox.io/embed/l396jqvnoz&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden; border: 1px solid black&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[About]]></title><description><![CDATA[Why? I don’t know. I think most React education is pathelogically complicated and I like the
-holidays. This is a modified version of how I…]]></description><link>https://react.holiday/about/</link><guid isPermaLink="false">https://react.holiday/about/</guid><pubDate>Fri, 01 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
-This is an React advent thingy; the whole 25 days, 25 lessons deal.
+&lt;iframe src=&quot;https://codesandbox.io/embed/l396jqvnoz&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden; border: 1px solid black&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[About]]></title><description><![CDATA[Why? ¯ _ (ツ)_/¯ I like holidays.
+I like helping people.
+I think most React education is pathologically complicated. This is a condensed…]]></description><link>https://react.holiday/about/</link><guid isPermaLink="false">https://react.holiday/about/</guid><pubDate>Fri, 01 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+This is a React advent thingy; the whole 25 days, 25 lessons deal.
 &lt;h3&gt;Why?&lt;/h3&gt;
-&lt;p&gt;I don’t know.&lt;/p&gt;
-&lt;p&gt;I think most React education is pathelogically complicated and I like the
-holidays.&lt;/p&gt;
-&lt;p&gt;This is a modified version of how I teach people React. It covers patterns,
-practices, and tools I use every day IRL.&lt;/p&gt;
-&lt;p&gt;None of the 🐴💩 you see pegging Hacker News.&lt;/p&gt;
-&lt;h3&gt;Prerequisit?&lt;/h3&gt;
+&lt;p&gt;¯_(ツ)_/¯&lt;/p&gt;
+&lt;p&gt;I like holidays.
+I like helping people.
+I think most React education is pathologically complicated.&lt;/p&gt;
+&lt;p&gt;This is a condensed version of how I teach people React. It’s the stuff I use every day IRL. None of the 🐴💩 you see pegging Hacker News.&lt;/p&gt;
+&lt;h3&gt;Prerequisite?&lt;/h3&gt;
 &lt;p&gt;I expect you to know JavaScript pretty well.&lt;/p&gt;
 &lt;p&gt;I don’t cover setting up a build or working with Node.&lt;/p&gt;
-&lt;p&gt;Examples use &lt;a href=&quot;https://codesandbox.io/&quot;&gt;codesandbox.io&lt;/a&gt; transport well to a
+&lt;p&gt;Examples use &lt;a href=&quot;https://codesandbox.io/&quot;&gt;codesandbox.io&lt;/a&gt; and transport well to a
 &lt;a href=&quot;https://github.com/facebookincubator/create-react-app&quot;&gt;create-react-app&lt;/a&gt;
 environment.&lt;/p&gt;
 &lt;h3&gt;Who dis?&lt;/h3&gt;
-&lt;p&gt;I’m &lt;a href=&quot;https://twitter.com/chantastic&quot;&gt;@chantastic&lt;/a&gt; and I make other React stuff
+&lt;p&gt;I’m &lt;a href=&quot;https://twitter.com/chantastic&quot;&gt;@chantastic&lt;/a&gt;. I make some other React stuff
 like &lt;a href=&quot;https://learnreact.com&quot;&gt;learnreact.com&lt;/a&gt; ,
 &lt;a href=&quot;https://reactpatterns.com&quot;&gt;https://reactpatterns.com&lt;/a&gt; , and
 &lt;a href=&quot;https://reactpatterns.com&quot;&gt;https://reactcheatsheet.com&lt;/a&gt;.&lt;/p&gt;
