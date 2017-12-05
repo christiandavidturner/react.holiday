@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Tue, 05 Dec 2017 16:21:16 GMT</lastBuildDate><item><title><![CDATA[Day 5: Components can use classes for special powers]]></title><description><![CDATA[Some components have to be special.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Tue, 05 Dec 2017 17:56:39 GMT</lastBuildDate><item><title><![CDATA[Day 5: Components can use classes for special powers]]></title><description><![CDATA[Some components have to be special.
 Those components get defined with  class . It’s not much to look at now.
 We’ll fill it in this week…]]></description><link>https://react.holiday/2017/5/</link><guid isPermaLink="false">https://react.holiday/2017/5/</guid><pubDate>Tue, 05 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;Some components have to be special.
@@ -56,7 +56,7 @@ Add it as an “attribute” where you use the component:&lt;/p&gt;
       &lt;/div&gt;
 &lt;h2&gt;Now how do I use ‘em &lt;em&gt;in&lt;/em&gt; the component?&lt;/h2&gt;
 &lt;p&gt;React puts &lt;code&gt;props&lt;/code&gt; in a single object.
-And that object is the, conveniently, the first argument of our component function.&lt;/p&gt;
+And that object is conveniently, the first argument of our component function.&lt;/p&gt;
 &lt;p&gt;Once you have the &lt;code&gt;props&lt;/code&gt; object, you can interpolate values in with &lt;code&gt;{}&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Greeting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -68,12 +68,12 @@ And that object is the, conveniently, the first argument of our component functi
 &lt;p&gt;Use the workspace below and play with props.&lt;/p&gt;
 &lt;p&gt;Be creative and have fun!&lt;/p&gt;
 &lt;/div&gt;
-&lt;iframe src=&quot;https://codesandbox.io/embed/vm2mpv06zy&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 3: Components are functions]]></title><description><![CDATA[Components are just functions. 🤯 How do I write said component functions? Easy. here’s one that spits out our  Hello 🎄  wherever used. How…]]></description><link>https://react.holiday/2017/3/</link><guid isPermaLink="false">https://react.holiday/2017/3/</guid><pubDate>Sun, 03 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/vm2mpv06zy&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 3: Components are functions]]></title><description><![CDATA[Components are just functions. 🤯 How do I write said component functions? Easy. Here’s one that spits out our  Hello 🎄  wherever used. How…]]></description><link>https://react.holiday/2017/3/</link><guid isPermaLink="false">https://react.holiday/2017/3/</guid><pubDate>Sun, 03 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;Components are just functions.&lt;/p&gt;
 &lt;p&gt;&lt;span style=&quot;font-size: 3em&quot;&gt;🤯&lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;How do I write said component functions?&lt;/h3&gt;
 &lt;p&gt;Easy.&lt;/p&gt;
-&lt;p&gt;here’s one that spits out our &lt;code&gt;Hello 🎄&lt;/code&gt; wherever used.&lt;/p&gt;
+&lt;p&gt;Here’s one that spits out our &lt;code&gt;Hello 🎄&lt;/code&gt; wherever used.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Greeting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Hello 🎄&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -89,8 +89,7 @@ Just use the function name like an HTML tag.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;h3&gt;That’s it?&lt;/h3&gt;
-&lt;p&gt;Pretty much but here’s something to remember:&lt;/p&gt;
-&lt;p&gt;Capitalize your custom components.
+&lt;p&gt;Pretty much, but here’s something to remember - Capitalize your Custom Components.
 If you don’t, JSX transformers assume you meant a native DOM element.&lt;/p&gt;
 &lt;h2&gt;Tinker with it&lt;/h2&gt;
 &lt;p&gt;Use the workspace below to play with components.&lt;/p&gt;
@@ -122,8 +121,8 @@ Most apps use projects like &lt;a href=&quot;http://babeljs.io/&quot;&gt;Babel&l
 There’s a certain harmony to spec’ing React elements in a syntax similar to HTML.&lt;/p&gt;
 &lt;h3&gt;Gotchas&lt;/h3&gt;
 &lt;p&gt;JSX isn’t all 🦄s and 🌈s.&lt;/p&gt;
-&lt;p&gt;Lowercase attributes like &lt;code&gt;class&lt;/code&gt;, &lt;code&gt;onclick&lt;/code&gt;, &lt;code&gt;autofocus&lt;/code&gt;, and &lt;code&gt;tabindex&lt;/code&gt; become camelCased &lt;code&gt;className&lt;/code&gt;, &lt;code&gt;onClick&lt;/code&gt;, &lt;code&gt;autoFocus&lt;/code&gt;, and &lt;code&gt;tabIndex&lt;/code&gt; respectively.
-The can also take any JavaScript expression.&lt;/p&gt;
+&lt;p&gt;Lowercase attributes like &lt;code&gt;class&lt;/code&gt;, &lt;code&gt;onclick&lt;/code&gt;, &lt;code&gt;autofocus&lt;/code&gt;, and &lt;code&gt;tabindex&lt;/code&gt; become camelCased &lt;code&gt;className&lt;/code&gt;, &lt;code&gt;onClick&lt;/code&gt;, &lt;code&gt;autoFocus&lt;/code&gt;, and &lt;code&gt;tabIndex&lt;/code&gt; respectively.&lt;/p&gt;
+&lt;p&gt;They can also take any JavaScript expression.&lt;/p&gt;
 &lt;p&gt;This takes time to get used to.
 The examples below are identical.&lt;/p&gt;
 &lt;h4&gt;HTML&lt;/h4&gt;
