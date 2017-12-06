@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Tue, 05 Dec 2017 17:56:39 GMT</lastBuildDate><item><title><![CDATA[Day 5: Components can use classes for special powers]]></title><description><![CDATA[Some components have to be special.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Wed, 06 Dec 2017 19:31:49 GMT</lastBuildDate><item><title><![CDATA[Day 6: Events or something like them]]></title><description><![CDATA[Look at HTML.
+It lets you handle DOM events inline. I could tell the sorted history that landed this in the “bad practice” bucket but we’d…]]></description><link>https://react.holiday/2017/6/</link><guid isPermaLink="false">https://react.holiday/2017/6/</guid><pubDate>Wed, 06 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;Look at HTML.
+It lets you handle DOM events inline.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-html&quot;&gt;&lt;code&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;onmousenter&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;alert(&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;imma...&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;)&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;onmousleave&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;alert(&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;just passing through.&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;)&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;alert(&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;do that thing you do!&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;)&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Do something&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;I could tell the sorted history that landed this in the “bad practice” bucket but we’d both be board.&lt;/p&gt;
+&lt;p&gt;Suffice to say, folks bent on “good practices” had to jump through hoops to implement safe, reusable, cross-browser event handlers.&lt;/p&gt;
+&lt;p&gt;React Events don’t share these trade-off.&lt;/p&gt;
+&lt;h2&gt;Adding event handlers in React&lt;/h2&gt;
+&lt;p&gt;Let’s add an &lt;code&gt;onClick&lt;/code&gt; (remember to camel-case) to our &lt;code&gt;ClapsCounter&lt;/code&gt; from &lt;a href=&quot;/2017/5&quot;&gt;yesterday&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot; claps!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+  👏
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h3&gt;Look, Ma! No strings!&lt;/h3&gt;
+&lt;p&gt;First, you’ll notice that we’re not using strings anymore 🙌 🙌 🙌&lt;/p&gt;
+&lt;p&gt;This is a theme in React:
+&lt;strong&gt;fewer strings, more JavaScript.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;Look, Ma! No DOM handlers!&lt;/h3&gt;
+&lt;p&gt;What the fish?
+Where did our event handler go?&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/button-event-handler-4762394a5a6d7536e73d37247850bfd3-07c6b.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 25.115207373271886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA6UlEQVQY052Py0rDUBCG87wuKiLiouCF2otdCK70HUpQ8BIbK/gSCl2VQJMmzTkxyclJXEg+zynoRjf6wzeLf4b5Z5ymacjzgkB8kEiFVdu2G/4jZ9st6Rh2ryuOPcXwUXPoaU58zemTYaYZGcYG2xsZLvyXb996A8N4mjHwMpyticLSva3oeTkHd4o9V9B7UGZAsuPmDP2C/as3+lNFZ5Jxdv9K96bYLD0y4X0TfvksOZ8JnK9TE1kSLBNWqxiRpqzXKVJI4jhBa00YRiiliMKQxSIgEhV1Xf982ZayLJkvFfPo/dehv+gTyQpomUmh7VEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Button Event Handling in React&quot;
+        title=&quot;&quot;
+        src=&quot;/static/button-event-handler-4762394a5a6d7536e73d37247850bfd3-fb8a0.png&quot;
+        srcset=&quot;/static/button-event-handler-4762394a5a6d7536e73d37247850bfd3-1a291.png 148w,
+/static/button-event-handler-4762394a5a6d7536e73d37247850bfd3-2bc4a.png 295w,
+/static/button-event-handler-4762394a5a6d7536e73d37247850bfd3-fb8a0.png 590w,
+/static/button-event-handler-4762394a5a6d7536e73d37247850bfd3-07c6b.png 868w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;React did the work of making this “bad practice” a “good practice” by adding our event handler at the top of the &lt;code&gt;docmunt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This is another React theme:
+&lt;strong&gt;best practices don’t have to be complicated practices.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;But really, what happened?&lt;/h3&gt;
+&lt;p&gt;Magic 🔮👻&lt;/p&gt;
+&lt;p&gt;If &lt;strong&gt;must&lt;/strong&gt; know, read more about React’s &lt;a href=&quot;https://reactjs.org/docs/handling-events.html&quot;&gt;Event handling magic&lt;/a&gt; and &lt;a href=&quot;https://reactjs.org/docs/events.html&quot;&gt;Synthetic Events&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and play with events.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a few mouse events.&lt;/li&gt;
+&lt;li&gt;For kicks, add a text input. Anything weird happen? Like you can’t type in it? Spooooooky.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/mny86kooy&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 5: Components can use classes for special powers]]></title><description><![CDATA[Some components have to be special.
 Those components get defined with  class . It’s not much to look at now.
 We’ll fill it in this week…]]></description><link>https://react.holiday/2017/5/</link><guid isPermaLink="false">https://react.holiday/2017/5/</guid><pubDate>Tue, 05 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;Some components have to be special.
