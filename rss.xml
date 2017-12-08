@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Thu, 07 Dec 2017 18:49:20 GMT</lastBuildDate><item><title><![CDATA[Day 7: It's a state of mind]]></title><description><![CDATA[Being sexy is all about attitude… It’s a state of mind. — Amisha Patel One of the  special powers  of class components is their ability to…]]></description><link>https://react.holiday/2017/7/</link><guid isPermaLink="false">https://react.holiday/2017/7/</guid><pubDate>Thu, 07 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Fri, 08 Dec 2017 21:08:49 GMT</lastBuildDate><item><title><![CDATA[Day 8: set state statically]]></title><description><![CDATA[Managing state is hard. I’ll take four days to cover the React APIs for setting state. So don’t read today’s lesson without coming back for…]]></description><link>https://react.holiday/2017/8/</link><guid isPermaLink="false">https://react.holiday/2017/8/</guid><pubDate>Fri, 08 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;Managing state is hard.&lt;/p&gt;
+&lt;p&gt;I’ll take four days to cover the React APIs for setting state.&lt;br&gt;
+So don’t read today’s lesson without coming back for &lt;strong&gt;set state dynamically&lt;/strong&gt;, &lt;strong&gt;Lamda Lamda Lamda&lt;/strong&gt;, and &lt;strong&gt;Shallow Hal&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;setState is GrrrrREAT!&lt;/h2&gt;
+&lt;p&gt;Meet &lt;a href=&quot;https://reactjs.org/docs/react-component.html#setstate&quot;&gt;setState()&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; someProp&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; newState &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;This is a &lt;a href=&quot;2017/5&quot;&gt;special power&lt;/a&gt; our components get by extending &lt;code&gt;React.Component&lt;/code&gt;.&lt;br&gt;
+When called, &lt;code&gt;setState&lt;/code&gt; updates the local &lt;code&gt;state&lt;/code&gt; object and re-renders the component.&lt;/p&gt;
+&lt;h2&gt;Set state statically&lt;/h2&gt;
+&lt;p&gt;Continue &lt;a href=&quot;/2017/7&quot;&gt;yesterday’s&lt;/a&gt; example and replace the &lt;code&gt;alert&lt;/code&gt; with a proper state change.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;button
+  type&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;text&quot;&lt;/span&gt;
+  onClick&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; clapCount&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;clapCount&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos; &apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;👏
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;button&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h2&gt;Limitations&lt;/h2&gt;
+&lt;p&gt;Above, we call &lt;code&gt;setState()&lt;/code&gt; with a new state object.&lt;/p&gt;
+&lt;p&gt;There are &lt;a href=&quot;https://reactjs.org/docs/react-component.html#setstate&quot;&gt;two ways to use setState&lt;/a&gt;.
+This one is easy to understand but quickly limiting.
+We set &lt;code&gt;clapCount&lt;/code&gt; with a static value but how do we use a dynamic value?
+How do we keep our counter counting, transitioning current state to the next state?&lt;/p&gt;
+&lt;p&gt;Tomorrow we’ll learn how to transition state.&lt;/p&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and set some state.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Change value you set &lt;code&gt;clapCount&lt;/code&gt; to. Get crazy; try a string.&lt;/li&gt;
+&lt;li&gt;Create another component that counts something else. 👍s, 🙌s, anything!&lt;/li&gt;
+&lt;li&gt;Keep the counter counting. Try your hand at making state changes dynamic.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/k58xm0vlyo&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 7: It's a state of mind]]></title><description><![CDATA[Being sexy is all about attitude… It’s a state of mind. — Amisha Patel One of the  special powers  of class components is their ability to…]]></description><link>https://react.holiday/2017/7/</link><guid isPermaLink="false">https://react.holiday/2017/7/</guid><pubDate>Thu, 07 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Being sexy is all about attitude… It’s a state of mind.&lt;br&gt;
 — Amisha Patel&lt;/p&gt;
