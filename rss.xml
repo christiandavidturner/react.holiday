@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Fri, 08 Dec 2017 21:08:49 GMT</lastBuildDate><item><title><![CDATA[Day 8: set state statically]]></title><description><![CDATA[Managing state is hard. I’ll take four days to cover the React APIs for setting state. So don’t read today’s lesson without coming back for…]]></description><link>https://react.holiday/2017/8/</link><guid isPermaLink="false">https://react.holiday/2017/8/</guid><pubDate>Fri, 08 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Sat, 09 Dec 2017 18:30:12 GMT</lastBuildDate><item><title><![CDATA[Day 9: set state dynamically]]></title><description><![CDATA[If you want to set state dynamically, use a  function . We give  setState  an anonymous function to be called with  state .
+Our function…]]></description><link>https://react.holiday/2017/9/</link><guid isPermaLink="false">https://react.holiday/2017/9/</guid><pubDate>Sat, 09 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;If you want to set state dynamically, use a &lt;strong&gt;function&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;previousState&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; someProp&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; previousState&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;someProp &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;We give &lt;code&gt;setState&lt;/code&gt; an anonymous function to be called with &lt;code&gt;state&lt;/code&gt;.
+Our function takes that &lt;code&gt;state&lt;/code&gt; and returns a new object with new values derived from the old.&lt;/p&gt;
+&lt;h2&gt;Concise but not clear&lt;/h2&gt;
+&lt;p&gt;This is how I write &lt;code&gt;setState(fn)&lt;/code&gt; in a modern code base.
+It’s how you’re likely to see it in the real world.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;previousState&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; clapCount&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; previousState&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;clapCount &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions&quot;&gt;Arrow functions&lt;/a&gt; have implicit returns
+but if the return type is an object, you must wrap it in partheses.&lt;/p&gt;
+&lt;h2&gt;Why &lt;code&gt;previousState&lt;/code&gt; not &lt;code&gt;currentState&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;While &lt;code&gt;setState&lt;/code&gt; does update state—&lt;strong&gt;eventually&lt;/strong&gt;—it does so asyncronously and in batches.&lt;/p&gt;
+&lt;p&gt;Because of that implementation detail, the state that your function recieves might not be the current state.&lt;/p&gt;
+&lt;h2&gt;I’m so confused…&lt;/h2&gt;
+&lt;p&gt;Yeah.
+It’s very confusing.&lt;/p&gt;
+&lt;p&gt;Tomorrow let’s implement our own state setter.
+You’ll get a better idea of how &lt;code&gt;setState&lt;/code&gt; sausage is made.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(I’ll use an actual sausage to illustrate)&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and set some state with functions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Experiment with syntax. Use both &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function&quot;&gt;function declarations&lt;/a&gt; and &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions&quot;&gt;arrow function expressions&lt;/a&gt; to dynamically set state. Does one seem clearer than the other?&lt;/li&gt;
+&lt;li&gt;For fun, use &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment&quot;&gt;destructuring assignment&lt;/a&gt; to unpack values from the &lt;code&gt;state&lt;/code&gt; object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/r7pzm1p7kn&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 8: set state statically]]></title><description><![CDATA[Managing state is hard. I’ll take four days to cover the React APIs for setting state. So don’t read today’s lesson without coming back for…]]></description><link>https://react.holiday/2017/8/</link><guid isPermaLink="false">https://react.holiday/2017/8/</guid><pubDate>Fri, 08 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;Managing state is hard.&lt;/p&gt;
 &lt;p&gt;I’ll take four days to cover the React APIs for setting state.&lt;br&gt;
 So don’t read today’s lesson without coming back for &lt;strong&gt;set state dynamically&lt;/strong&gt;, &lt;strong&gt;Lamda Lamda Lamda&lt;/strong&gt;, and &lt;strong&gt;Shallow Hal&lt;/strong&gt;.&lt;/p&gt;
