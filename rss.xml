@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Sun, 10 Dec 2017 23:18:55 GMT</lastBuildDate><item><title><![CDATA[Day 10: Lambda Lamda Lamda]]></title><description><![CDATA[When you set down with set state, you’re might think state is set immediately. It isn’t. There’s a leak! setState  has a naming problem. You…]]></description><link>https://react.holiday/2017/10/</link><guid isPermaLink="false">https://react.holiday/2017/10/</guid><pubDate>Sun, 10 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Mon, 11 Dec 2017 18:55:37 GMT</lastBuildDate><item><title><![CDATA[Day 11: Use ternaries for conditional rendering]]></title><description><![CDATA[You can’t use  if/else  statements in `render. In those curly-braces, you can only use expressions.
+Fortunately, you got a couple options…]]></description><link>https://react.holiday/2017/11/</link><guid isPermaLink="false">https://react.holiday/2017/11/</guid><pubDate>Mon, 11 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;You can’t use &lt;code&gt;if/else&lt;/code&gt; statements in `render.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token comment&quot;&gt;/* no if/else */&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;In those curly-braces, you can only use expressions.
+Fortunately, you got a couple options.&lt;/p&gt;
+&lt;h2&gt;Tern or Burn&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Ternary_operation&quot;&gt;ternary operator&lt;/a&gt; is a
+syntax for conditional expressions.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token comment&quot;&gt;// just like if/else&lt;/span&gt;
+someCondition &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;shown if truthy&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;shown if falsy&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h2&gt;Short circuit&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Short-circuit_evaluation&quot;&gt;Short-circuit evaluation&lt;/a&gt; works too.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;someCondition &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;shown only if truthy&apos;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// if&lt;/span&gt;
+someCondition &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;shown only if falsy&apos;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// unless&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h2&gt;Clap on, clap off, The Clapper&lt;/h2&gt;
+&lt;p&gt;Our &lt;code&gt;ClapCounter&lt;/code&gt; (from &lt;a href=&quot;/2017/9&quot;&gt;the 9th&lt;/a&gt;) acts like every clap is the first clap.&lt;br&gt;
+It just isn’t true.&lt;/p&gt;
+&lt;p&gt;Let’s use short-circuit evaluation render the message &lt;em&gt;only&lt;/em&gt; when there are &lt;code&gt;0&lt;/code&gt; claps.
+Let’s also render the number of claps &lt;em&gt;only&lt;/em&gt; when there are &lt;code&gt;1&lt;/code&gt; or more.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;clapCount &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;clapCount&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; 👏
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+  &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;clapCount &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;i&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; be the first to clap&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;i&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and explore conditional rendering.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use a ternary to add an alternative message &lt;em&gt;(&lt;code&gt;condition ? truthy : falsy&lt;/code&gt;)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Get crazy and use what we’ve learned about &lt;a href=&quot;/2017/6/&quot;&gt;events&lt;/a&gt; and &lt;a href=&quot;/2017/7/&quot;&gt;state&lt;/a&gt; to conditionally display a message on hover. You can do it!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/1rq09lw5r4&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 10: Lambda Lamda Lamda]]></title><description><![CDATA[When you set down with set state, you’re might think state is set immediately. It isn’t. There’s a leak! setState  has a naming problem. You…]]></description><link>https://react.holiday/2017/10/</link><guid isPermaLink="false">https://react.holiday/2017/10/</guid><pubDate>Sun, 10 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;When you set down with set state, you’re might think state is set immediately.&lt;/p&gt;
 &lt;p&gt;It isn’t.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
