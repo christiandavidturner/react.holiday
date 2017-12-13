@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Tue, 12 Dec 2017 17:26:32 GMT</lastBuildDate><item><title><![CDATA[Day 12: Smoosh components]]></title><description><![CDATA[Compose  means “smoosh things together.” You can  smoosh  🥛 and ☕️. You can  smoosh  a 🍔 with your 😋. You  smoosh  things all day; it’s…]]></description><link>https://react.holiday/2017/12/</link><guid isPermaLink="false">https://react.holiday/2017/12/</guid><pubDate>Tue, 12 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Wed, 13 Dec 2017 22:45:36 GMT</lastBuildDate><item><title><![CDATA[Day 13: Gotta fetch 'em all]]></title><description><![CDATA[Today, we start with a new component! 🎊 🎉 🎊 🎉 Pokemon Take a stab at writing this component
+ in a new sandbox  before reading the next…]]></description><link>https://react.holiday/2017/13/</link><guid isPermaLink="false">https://react.holiday/2017/13/</guid><pubDate>Wed, 13 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;Today, we start with a new component!&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 2em&quot;&gt;🎊 🎉 🎊 🎉&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Pokemon&lt;/h2&gt;
+&lt;p&gt;Take a stab at writing this component
+&lt;a href=&quot;https://codesandbox.io/s/new&quot;&gt;in a new sandbox&lt;/a&gt; before reading the next
+section.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name the component &lt;code&gt;Pokemon&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make sure it’s a component that can hold &lt;a href=&quot;/2017/7/&quot;&gt;&lt;code&gt;state&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;{ character: null }&lt;/code&gt; as the inital state&lt;/li&gt;
+&lt;li&gt;Take an &lt;code&gt;id&lt;/code&gt; &lt;a href=&quot;/2017/4&quot;&gt;prop&lt;/a&gt;. It’ll be the index of the Pokemon we fetch.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Render &lt;a href=&quot;/2017/11&quot;&gt;conditionally&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If &lt;code&gt;state&lt;/code&gt; has a &lt;code&gt;character&lt;/code&gt;, render &lt;code&gt;this.state.character.name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Otherwise render the message &lt;code&gt;...loading&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;(At this point, it should always render &lt;code&gt;...loading&lt;/code&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Fetch a Pokemon&lt;/h2&gt;
+&lt;p&gt;You got it? Great!&lt;/p&gt;
+&lt;p&gt;In the workspace below, I’ve included a &lt;code&gt;fetchPokemon&lt;/code&gt; function. We’ll use it in
+the next section.&lt;/p&gt;
+&lt;h2&gt;Meet &lt;code&gt;componentDidMount&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;componentDidMount&lt;/code&gt; is a &lt;a href=&quot;/2017/5&quot;&gt;special power&lt;/a&gt; our component has. Speaking
+technically, it’s a method on our component class.&lt;/p&gt;
+&lt;p&gt;When defined, it’s called when a &lt;code&gt;Pokemon&lt;/code&gt; is &lt;em&gt;mounted&lt;/em&gt; into the DOM.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token function&quot;&gt;componentDidMount&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;fetchPokemon&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;character&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; character&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; character &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;code&gt;componentDidMount&lt;/code&gt; &lt;strong&gt;is the
+&lt;a href=&quot;https://reactjs.org/docs/react-component.html#componentdidmount&quot;&gt;ideal place to fetch data from a server.&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and explore fetching data in &lt;code&gt;componentDidMount&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fetch a pokemon with a different id&lt;/li&gt;
+&lt;li&gt;Log messages from &lt;code&gt;componentDidMount&lt;/code&gt; and &lt;code&gt;render&lt;/code&gt; observe the order in the
+console.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/wkwjmqnrow&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 12: Smoosh components]]></title><description><![CDATA[Compose  means “smoosh things together.” You can  smoosh  🥛 and ☕️. You can  smoosh  a 🍔 with your 😋. You  smoosh  things all day; it’s…]]></description><link>https://react.holiday/2017/12/</link><guid isPermaLink="false">https://react.holiday/2017/12/</guid><pubDate>Tue, 12 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Compose&lt;/strong&gt; means “smoosh things together.”&lt;/p&gt;
 &lt;p&gt;You can &lt;strong&gt;smoosh&lt;/strong&gt; 🥛 and ☕️.&lt;/p&gt;
 &lt;p&gt;You can &lt;strong&gt;smoosh&lt;/strong&gt; a 🍔 with your 😋.&lt;/p&gt;
