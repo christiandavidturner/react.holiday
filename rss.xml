@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Sat, 16 Dec 2017 00:19:33 GMT</lastBuildDate><item><title><![CDATA[Day 15: Key your children]]></title><description><![CDATA[Yesterday , you might have noticed this console warning pop up with our list. 👶 Give the  children  keys 🔑 Following the warning above is…]]></description><link>https://react.holiday/2017/15/</link><guid isPermaLink="false">https://react.holiday/2017/15/</guid><pubDate>Fri, 15 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Sun, 17 Dec 2017 01:00:39 GMT</lastBuildDate><item><title><![CDATA[Day 16: Mind the lifecycle gap]]></title><description><![CDATA[Today we’ll talk about things that  don’t  happen! First, a new component I’d like you to write a new component. You’ll  define this…]]></description><link>https://react.holiday/2017/16/</link><guid isPermaLink="false">https://react.holiday/2017/16/</guid><pubDate>Sat, 16 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;Today we’ll talk about things that &lt;strong&gt;don’t&lt;/strong&gt; happen!&lt;/p&gt;
+&lt;h2&gt;First, a new component&lt;/h2&gt;
+&lt;p&gt;I’d like you to write a new component.&lt;/p&gt;
+&lt;p&gt;You’ll &lt;a href=&quot;/2017/5/&quot;&gt;define this component&lt;/a&gt; &lt;a href=&quot;/2017/7/&quot;&gt;with some state&lt;/a&gt; and &lt;a href=&quot;/2017/6/&quot;&gt;event handlers&lt;/a&gt; for &lt;a href=&quot;/2017/9/&quot;&gt;updating that state&lt;/a&gt;. Here are the instructions:&lt;/p&gt;
+&lt;style&gt;
+.short-list ul li {
+  margin-bottom: 0;
+}
+&lt;/style&gt;
+&lt;div class=&quot;short-list&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;Name it &lt;code&gt;PokemonPager&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set the initial state to have an &lt;code&gt;id&lt;/code&gt; of &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Render &lt;code&gt;state.id&lt;/code&gt; in an &lt;code&gt;h2&lt;/code&gt; component&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Renders two &lt;code&gt;button&lt;/code&gt; components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clicking &lt;strong&gt;“Previous”&lt;/strong&gt; decrements &lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Clicking &lt;strong&gt;“Next”&lt;/strong&gt; increments &lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://codesandbox.io/s/new&quot;&gt;Create a new sandbox&lt;/a&gt; for your component. Try not to look ahead.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 2em&quot;&gt;⚛️ 💪&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;World’s Worst Pokemon Pager&lt;/h2&gt;
+&lt;p&gt;You’ve made a &lt;code&gt;PokemonPager&lt;/code&gt; but it’s a bad one.
+That’s my fault.&lt;/p&gt;
+&lt;p&gt;I forgot that it needs to render a &lt;code&gt;Pokemon&lt;/code&gt;.&lt;br&gt;
+Let’s fix that!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;PokemonPager&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Component&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Pokemon&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;Now we see a big number &lt;code&gt;1&lt;/code&gt; above Bulbasaur’s name and abilities.&lt;/p&gt;
+&lt;p&gt;What happens when we click the buttons?&lt;/p&gt;
+&lt;h2&gt;Where’s Ivysaur?!?&lt;/h2&gt;
+&lt;p&gt;Our number gets incremented but Bulbasaur remains the same.&lt;/p&gt;
+&lt;p&gt;The components are updating—we see that in the number—but &lt;code&gt;Pokemon&lt;/code&gt; isn’t changing.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 2em&quot;&gt;🤔&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;This is where I leave you&lt;/h2&gt;
+&lt;p&gt;Here’s the problem:&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;Pokemon&lt;/code&gt; component only fetches a Pokemon when it gets &lt;code&gt;mounted&lt;/code&gt;.&lt;br&gt;
+It’s only &lt;code&gt;mounted&lt;/code&gt; once. After that, it’s gets &lt;code&gt;updated&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We need to fetch the next Pokemon in one of the &lt;a href=&quot;https://reactjs.org/docs/react-component.html#updating&quot;&gt;updating lifecycle methods&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Read the docs on &lt;a href=&quot;https://reactjs.org/docs/react-component.html#updating&quot;&gt;updating lifecycle methods&lt;/a&gt;. Find and use one of the methods to fetch a Pokemon every time the component receives a prop &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and explore updating lifecycle methods.&lt;/p&gt;
+&lt;p&gt;Make an attempt and I’ll show you my recommendation tomorrow.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Read sections above carefully; they subtly suggest the right method. Don’t forget that most lifecycle methods take arguments.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/5xlq7yjxyl&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 15: Key your children]]></title><description><![CDATA[Yesterday , you might have noticed this console warning pop up with our list. 👶 Give the  children  keys 🔑 Following the warning above is…]]></description><link>https://react.holiday/2017/15/</link><guid isPermaLink="false">https://react.holiday/2017/15/</guid><pubDate>Fri, 15 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;/2017/14/&quot;&gt;Yesterday&lt;/a&gt;, you might have noticed this console warning pop up with our list.&lt;/p&gt;
 &lt;p&gt;
   &lt;a
