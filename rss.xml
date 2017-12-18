@@ -1,4 +1,104 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Sun, 17 Dec 2017 01:00:39 GMT</lastBuildDate><item><title><![CDATA[Day 16: Mind the lifecycle gap]]></title><description><![CDATA[Today we’ll talk about things that  don’t  happen! First, a new component I’d like you to write a new component. You’ll  define this…]]></description><link>https://react.holiday/2017/16/</link><guid isPermaLink="false">https://react.holiday/2017/16/</guid><pubDate>Sat, 16 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Mon, 18 Dec 2017 20:17:25 GMT</lastBuildDate><item><title><![CDATA[Day 18: Conscious uncoupling]]></title><description><![CDATA[Gweneth got it right.
+ Conscious Uncoupling  is a good (for components). Let’s explore a new  smooshing  technique that makes  PokemonPager…]]></description><link>https://react.holiday/2017/18/</link><guid isPermaLink="false">https://react.holiday/2017/18/</guid><pubDate>Mon, 18 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;Gweneth got it right.
+&lt;a href=&quot;https://goop.com/work/relationships/conscious-uncoupling-2/&quot;&gt;Conscious Uncoupling&lt;/a&gt; is a good (for components).&lt;/p&gt;
+&lt;p&gt;Let’s explore a new &lt;a href=&quot;/2017/12&quot;&gt;smooshing&lt;/a&gt; technique that makes &lt;code&gt;PokemonPager&lt;/code&gt; reusable.&lt;/p&gt;
+&lt;h2&gt;Insert component here&lt;/h2&gt;
+&lt;p&gt;You can &lt;strong&gt;insert&lt;/strong&gt; components into other components via props.&lt;/p&gt;
+&lt;p&gt;Because &lt;a href=&quot;https://react.holiday/2017/3&quot;&gt;components are function&lt;/a&gt; and JavaScript functions transportable, we can pass components around.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;SomeComponent&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;OtherComponent&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;The above might be implemented something like this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;OtherComponent&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;👋&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;SomeComponent&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;this.props.component&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;em&gt;(Yes, JSX lets you do that)&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Uncoupling &lt;code&gt;PokemonPager&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Our &lt;code&gt;PokemonPager&lt;/code&gt; doesn’t need to be Pokemon specific.
+With a little work, it could render anything that takes an &lt;code&gt;id&lt;/code&gt; prop.&lt;/p&gt;
+&lt;p&gt;Let’s uncouple it by &lt;strong&gt;inserting&lt;/strong&gt; &lt;code&gt;Pokemon&lt;/code&gt; via a &lt;code&gt;component&lt;/code&gt; prop.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;PokemonPager&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;Pokemon&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;root&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;Now update the &lt;code&gt;PokemonPager&lt;/code&gt; to render &lt;code&gt;this.props.component&lt;/code&gt; where &lt;code&gt;&amp;#x3C;Pokemon /&gt;&lt;/code&gt; is.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;this.props.component&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;Finally, rename &lt;code&gt;PokemonPager&lt;/code&gt; to a &lt;code&gt;IdPager&lt;/code&gt;, wherever you see it.&lt;/p&gt;
+&lt;h2&gt;Smooshing is magic&lt;/h2&gt;
+&lt;p&gt;We’re getting to the good stuff.
+&lt;strong&gt;Smooshing&lt;/strong&gt; is the magic of React 🧙‍♂️&lt;/p&gt;
+&lt;p&gt;This is the first of three &lt;strong&gt;smooshing&lt;/strong&gt; patterns we’ll explore this week.&lt;/p&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and explore component insertion &lt;strong&gt;smooshing&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new component called &lt;code&gt;ShowId&lt;/code&gt; and &lt;strong&gt;insert&lt;/strong&gt; it into &lt;code&gt;IdPager&lt;/code&gt; where &lt;code&gt;Pokemon&lt;/code&gt; is now.&lt;/li&gt;
+&lt;li&gt;Read the doc on defaultProps. Use your new &lt;code&gt;ShowId&lt;/code&gt; component as the &lt;code&gt;defaultProps&lt;/code&gt; for &lt;code&gt;omponent&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/my582lwk4p&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 17: Always use `Did`, unless you shouldn't]]></title><description><![CDATA[Here is some lifecycle wisdom: Always use  Did  methods, unless you shouldn’t. Confused? Read on for more (confusion). Why  Did ? Did…]]></description><link>https://react.holiday/2017/17/</link><guid isPermaLink="false">https://react.holiday/2017/17/</guid><pubDate>Sun, 17 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;Here is some lifecycle wisdom:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Always use &lt;code&gt;Did&lt;/code&gt; methods, unless you shouldn’t.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Confused? Read on for more (confusion).&lt;/p&gt;
+&lt;h2&gt;Why &lt;code&gt;Did&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Did&lt;/code&gt; methods like &lt;code&gt;componentDidMount&lt;/code&gt; and &lt;code&gt;componentDidUpdate&lt;/code&gt; are “safe”.&lt;br&gt;
+They fire after React finishes its work.
+So your futzing won’t collide with React’s futzing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Use &lt;code&gt;Did&lt;/code&gt; methods are first choice.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Why not &lt;code&gt;Did&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;Sometimes &lt;code&gt;Did&lt;/code&gt;s don’t do exactly what you need.&lt;/p&gt;
+&lt;p&gt;In our &lt;code&gt;Pokemon&lt;/code&gt; component, using &lt;code&gt;componentDidUpdate&lt;/code&gt; will fetch and &lt;code&gt;setState&lt;/code&gt; with a new Pokemon with each update.
+That sounds like what we want but isn’t.&lt;/p&gt;
+&lt;p&gt;New props update &lt;code&gt;Pokemon&lt;/code&gt; but so does the &lt;code&gt;setState&lt;/code&gt; calls.
+Infinite loops, run!!!&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 2em&quot;&gt;🏃‍♂️ 🏃‍♀️ 🏃‍♂️ 🏃‍♀️&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We have one of those &lt;strong&gt;“unless you shouldn’t”&lt;/strong&gt; cases.&lt;/p&gt;
+&lt;h2&gt;Enter &lt;code&gt;componentWillReceiveProps&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;We need a hero lifecycle method that fires for new props but not new state.
+&lt;code&gt;componentWillReceiveProps&lt;/code&gt; is that hero.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token function&quot;&gt;componentWillReceiveProps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nextProps&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;fetchPokemon&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nextProps&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;character &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; character&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; character &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;This lifecycle method fires &lt;strong&gt;before&lt;/strong&gt; &lt;code&gt;this.props&lt;/code&gt; is set to the new props.
+So we don’t use &lt;code&gt;this.props&lt;/code&gt;.
+We use the &lt;code&gt;nextProps&lt;/code&gt;, which &lt;code&gt;componentWillReceiveProps&lt;/code&gt; receives as an argument.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 2em&quot;&gt; 💥 &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;You’re just gonna have to play with this one…&lt;/p&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and explore &lt;code&gt;componentWillReceiveProps&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Compare &lt;code&gt;this.props&lt;/code&gt; and &lt;code&gt;nextProps&lt;/code&gt; by logging them.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Change the local name of &lt;code&gt;nextProps&lt;/code&gt;. There’s nothing special about the name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Read &lt;a href=&quot;https://reactjs.org/docs/react-component.html#componentwillreceiveprops&quot;&gt;the docs&lt;/a&gt;. Any other things &lt;code&gt;componentWillReceiveProps&lt;/code&gt; can do?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/jnn1xz7wo9&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 16: Mind the lifecycle gap]]></title><description><![CDATA[Today we’ll talk about things that  don’t  happen! First, a new component I’d like you to write a new component. You’ll  define this…]]></description><link>https://react.holiday/2017/16/</link><guid isPermaLink="false">https://react.holiday/2017/16/</guid><pubDate>Sat, 16 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;Today we’ll talk about things that &lt;strong&gt;don’t&lt;/strong&gt; happen!&lt;/p&gt;
 &lt;h2&gt;First, a new component&lt;/h2&gt;
 &lt;p&gt;I’d like you to write a new component.&lt;/p&gt;
@@ -336,8 +436,8 @@ Let’s also render the number of claps &lt;em&gt;only&lt;/em&gt; when there are
 &lt;li&gt;Get crazy and use what we’ve learned about &lt;a href=&quot;/2017/6/&quot;&gt;events&lt;/a&gt; and &lt;a href=&quot;/2017/7/&quot;&gt;state&lt;/a&gt; to conditionally display a message on hover. You can do it!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;iframe src=&quot;https://codesandbox.io/embed/1rq09lw5r4&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 10: setState is a food truck]]></title><description><![CDATA[When you set down with set state, you’re might think state is set immediately. It isn’t. There’s a leak! setState  has a naming problem. You…]]></description><link>https://react.holiday/2017/10/</link><guid isPermaLink="false">https://react.holiday/2017/10/</guid><pubDate>Sun, 10 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
-&lt;p&gt;When you set down with set state, you’re might think state is set immediately.&lt;/p&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/1rq09lw5r4&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 10: setState is a food truck]]></title><description><![CDATA[When you set down with set state, you might think state is set immediately. It isn’t. There’s a leak! setState  has a naming problem. You’re…]]></description><link>https://react.holiday/2017/10/</link><guid isPermaLink="false">https://react.holiday/2017/10/</guid><pubDate>Sun, 10 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;When you set down with set state, you might think state is set immediately.&lt;/p&gt;
 &lt;p&gt;It isn’t.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; count&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -354,8 +454,8 @@ But only because it beats a more descriptive alternative like &lt;code&gt;enqueu
 &lt;h2&gt;A fast-food mental model&lt;/h2&gt;
 &lt;p&gt;Food trucks provide a great mental model for &lt;code&gt;setState&lt;/code&gt;.
 Here are some attributes they share:&lt;/p&gt;
-&lt;h4&gt;Asyncronous&lt;/h4&gt;
-&lt;p&gt;Food trucks act &lt;strong&gt;asyncronously&lt;/strong&gt;—a big word for &lt;em&gt;“I move on while they make food.”&lt;/em&gt;&lt;/p&gt;
+&lt;h4&gt;Asynchronous&lt;/h4&gt;
+&lt;p&gt;Food trucks act &lt;strong&gt;asynchronously&lt;/strong&gt;—a big word for &lt;em&gt;“I move on while they make food.”&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I order.&lt;br&gt;
 I pay.&lt;br&gt;
 I step back and read twitter.&lt;br&gt;
@@ -375,7 +475,7 @@ So when that fryer timer fires, fry orders get &lt;strong&gt;prioritized&lt;/str
 &lt;p&gt;&lt;code&gt;setState&lt;/code&gt; is a food truck.&lt;/p&gt;
 &lt;p&gt;Orders get &lt;strong&gt;queued&lt;/strong&gt;.&lt;br&gt;
 Work gets &lt;strong&gt;batched&lt;/strong&gt; and &lt;strong&gt;prioritized&lt;/strong&gt; for speed.&lt;br&gt;
-And it all happens &lt;strong&gt;asyncronously&lt;/strong&gt;.  &lt;/p&gt;
+And it all happens &lt;strong&gt;asynchronously&lt;/strong&gt;.  &lt;/p&gt;
 &lt;p&gt;On the next render, you can pick-up your piping hot &lt;em&gt;Lambda Lambda Lambda and fries&lt;/em&gt;.&lt;/p&gt;
 &lt;h2&gt;Tinker with it&lt;/h2&gt;
 &lt;p&gt;Use the workspace below and play around with the state-setting illustration.&lt;/p&gt;
@@ -403,10 +503,10 @@ It’s how you’re likely to see it in the real world.&lt;/p&gt;
       &lt;/div&gt;
 &lt;br /&gt;
 &lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions&quot;&gt;Arrow functions&lt;/a&gt; have implicit returns
-but if the return type is an object, you must wrap it in partheses.&lt;/p&gt;
+but if the return type is an object, you must wrap it in parentheses.&lt;/p&gt;
 &lt;h2&gt;Why &lt;code&gt;previousState&lt;/code&gt; not &lt;code&gt;currentState&lt;/code&gt;?&lt;/h2&gt;
-&lt;p&gt;While &lt;code&gt;setState&lt;/code&gt; does update state—&lt;strong&gt;eventually&lt;/strong&gt;—it does so asyncronously and in batches.&lt;/p&gt;
-&lt;p&gt;Because of that implementation detail, the state that your function recieves might not be the current state.&lt;/p&gt;
+&lt;p&gt;While &lt;code&gt;setState&lt;/code&gt; does update state—&lt;strong&gt;eventually&lt;/strong&gt;—it does so asynchronously and in batches.&lt;/p&gt;
+&lt;p&gt;Because of that implementation detail, the state that your function receives might not be the current state.&lt;/p&gt;
 &lt;h2&gt;I’m so confused…&lt;/h2&gt;
 &lt;p&gt;Yeah.
 It’s very confusing.&lt;/p&gt;
@@ -530,8 +630,8 @@ It lets you handle DOM events inline. I could tell the sordid history that lande
 It lets you handle DOM events inline.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-html&quot;&gt;&lt;code&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt;
-  &lt;span class=&quot;token attr-name&quot;&gt;onmousenter&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;alert(&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;imma...&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;)&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token attr-name&quot;&gt;onmousleave&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;alert(&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;just passing through.&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;)&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;onmouseenter&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;alert(&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;imma...&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;)&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;onmouseleave&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;alert(&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;just passing through.&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;)&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
   &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;alert(&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;do that thing you do!&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;)&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Do something&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
