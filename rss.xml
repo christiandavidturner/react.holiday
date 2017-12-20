@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Tue, 19 Dec 2017 19:48:09 GMT</lastBuildDate><item><title><![CDATA[Day 19: Decide not to decide]]></title><description><![CDATA[I know what my decision is, Which is not to decide. Indecision is the best tool you have for  smooshing  components together. Master it…]]></description><link>https://react.holiday/2017/19/</link><guid isPermaLink="false">https://react.holiday/2017/19/</guid><pubDate>Tue, 19 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Wed, 20 Dec 2017 21:36:09 GMT</lastBuildDate><item><title><![CDATA[Day 20: Components: What do they know? Do they know things?? Let's Find out!]]></title><description><![CDATA[Smart vs. Dumb components 
+is a dichotomy that has dominated the React conversation as long as React has
+existed. Here’s the nut:  Some…]]></description><link>https://react.holiday/2017/20/</link><guid isPermaLink="false">https://react.holiday/2017/20/</guid><pubDate>Wed, 20 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0&quot;&gt;Smart vs. Dumb components&lt;/a&gt;
+is a dichotomy that has dominated the React conversation as long as React has
+existed.&lt;/p&gt;
+&lt;p&gt;Here’s the nut: &lt;strong&gt;Some components know things. Some don’t.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Knowing components&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/2017/19&quot;&gt;Yesterday’s&lt;/a&gt; Pokemon app only has &lt;strong&gt;knowing&lt;/strong&gt; components. They know
+the &lt;code&gt;id&lt;/code&gt; and how to change that &lt;code&gt;id&lt;/code&gt;. They know when, where, and how to &lt;code&gt;fetch&lt;/code&gt;
+new data.&lt;/p&gt;
+&lt;p&gt;They know things.&lt;/p&gt;
+&lt;h2&gt;Unknowing components&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Unknowing&lt;/strong&gt; components operate on &lt;code&gt;props&lt;/code&gt; alone. If the component works
+strictly with &lt;code&gt;props&lt;/code&gt;, it’s an &lt;strong&gt;unknowing&lt;/strong&gt; component.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;Unknowing&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Hi &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt; I didn&apos;t know you until now&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h2&gt;Extracting unknowing components&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/2017/19&quot;&gt;Yesterday’s&lt;/a&gt; &lt;code&gt;Pokemon&lt;/code&gt; is all tangled. It knows how to fetch &lt;strong&gt;and&lt;/strong&gt;
+how to present.&lt;/p&gt;
+&lt;p&gt;We can untangle it by splitting &lt;code&gt;Pokemon&lt;/code&gt; into two components.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;FetchPokemon&lt;/code&gt; (&lt;strong&gt;knowing&lt;/strong&gt;) keeps the smarts required to fetch a Pokemon then
+gives what it knows to &lt;code&gt;Pokemon&lt;/code&gt; (&lt;strong&gt;unknowing&lt;/strong&gt;) through props.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FetchPokemon&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Component&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; character&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;componentDidMount&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;componentWillReceiveProps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nextProps&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Pokemon&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;character&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;character&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;code&gt;Pokemon&lt;/code&gt; (&lt;strong&gt;unknowing&lt;/strong&gt;) has no smarts and only renders what it’s given.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;Pokemon&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;character&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h2&gt;Why though?&lt;/h2&gt;
+&lt;pre style={{ fontSize: &quot;2em&quot; }}&gt;¯\_(ツ)_/¯&lt;/pre&gt;
+&lt;p&gt;This pattern alone is useless—strictly cosmetic.
+But—when paired with &lt;a href=&quot;/2017/19&quot;&gt;render props&lt;/a&gt;—it’s how you do &lt;a href=&quot;https://en.wikipedia.org/wiki/Separation_of_concerns&quot;&gt;separation of concerns&lt;/a&gt; in React.&lt;/p&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and explore &lt;strong&gt;knowing&lt;/strong&gt; and &lt;strong&gt;unknowing&lt;/strong&gt; components.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reconstruct the coupled version of &lt;code&gt;Pokemon&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Separate &lt;code&gt;Pokemon&lt;/code&gt; and &lt;code&gt;FetchPokemon&lt;/code&gt; again. Practice makes perfect.&lt;/li&gt;
+&lt;li&gt;See the &lt;a href=&quot;2017/19&quot;&gt;render prop&lt;/a&gt; opportunity? Take it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/ko4jvklm2v&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 19: Decide not to decide]]></title><description><![CDATA[I know what my decision is, Which is not to decide. Indecision is the best tool you have for  smooshing  components together. Master it…]]></description><link>https://react.holiday/2017/19/</link><guid isPermaLink="false">https://react.holiday/2017/19/</guid><pubDate>Tue, 19 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I know what my decision is,&lt;br&gt;
 Which is not to decide.&lt;/p&gt;
@@ -383,7 +441,7 @@ section.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Name the component &lt;code&gt;Pokemon&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Make sure it’s a component that can hold &lt;a href=&quot;/2017/7/&quot;&gt;&lt;code&gt;state&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Use &lt;code&gt;{ character: null }&lt;/code&gt; as the inital state&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;{ character: null }&lt;/code&gt; as the initial state&lt;/li&gt;
 &lt;li&gt;Take an &lt;code&gt;id&lt;/code&gt; &lt;a href=&quot;/2017/4&quot;&gt;prop&lt;/a&gt;. It’ll be the index of the Pokemon we fetch.&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Render &lt;a href=&quot;/2017/11&quot;&gt;conditionally&lt;/a&gt;:&lt;/p&gt;
