@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Fri, 22 Dec 2017 01:08:20 GMT</lastBuildDate><item><title><![CDATA[Day 21: something I like to call Chrismukkah]]></title><description><![CDATA[Welcome to the (H)OC I’m gonna level with you, I don’t know to explain higher-order components to you.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Fri, 22 Dec 2017 01:20:57 GMT</lastBuildDate><item><title><![CDATA[Day 21: something I like to call Chrismukkah]]></title><description><![CDATA[Welcome to the (H)OC I’m gonna level with you, I don’t know to explain higher-order components to you.
 I work in analogies and there just…]]></description><link>https://react.holiday/2017/21/</link><guid isPermaLink="false">https://react.holiday/2017/21/</guid><pubDate>Thu, 21 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;h2&gt;Welcome to the (H)OC&lt;/h2&gt;
 &lt;p&gt;I’m gonna level with you, I don’t know to explain higher-order components to you.
@@ -34,18 +34,10 @@ here’s a HOC named &lt;code&gt;withKnowledge&lt;/code&gt;.&lt;/p&gt;
 &lt;br /&gt;
 &lt;p&gt;&lt;code&gt;withKnowleding&lt;/code&gt; wraps our &lt;strong&gt;knowing&lt;/strong&gt; component in a function that takes an &lt;strong&gt;unknowing&lt;/strong&gt; component as an argument and &lt;strong&gt;smooshes&lt;/strong&gt; them together.&lt;/p&gt;
 &lt;p&gt;Bring your own “knowledge” and you know everything you need to about HOCs.&lt;/p&gt;
-&lt;h2&gt;Why HOCs are hard to understand&lt;/h2&gt;
-&lt;p&gt;Like &lt;a href=&quot;https://www.youtube.com/watch?v=T9C-H_UvbUg&quot;&gt;Chrismukkah&lt;/a&gt;, it’s just too many things.&lt;/p&gt;
-&lt;p&gt;Components don’t have the same composition mechanics as functions.
-So, higher-order components are really high-order component factories.
-Now that’s two concepts you’de have trouble explaining at a dinner party.
-These components are composed outside of &lt;code&gt;render&lt;/code&gt;, so dev tools kinda shit the bed.
-The artifact is your component wrapped in another component with opaque internals.
-And when they aren’t assigned to intermediate variables, you have to use &lt;code&gt;React.createElement&lt;/code&gt; instead of JSX.&lt;/p&gt;
-&lt;p&gt;Too many things.&lt;/p&gt;
 &lt;h2&gt;Why though?&lt;/h2&gt;
 &lt;p&gt;Higher-order components are another way of &lt;a href=&quot;/2017/18&quot;&gt;uncoupling&lt;/a&gt; components.
 Many popular libraries use them.&lt;/p&gt;
+&lt;p&gt;I think there are only a couple reasons to use them and you’ll likely never run into one in regular app code.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2&gt;Tinker with it&lt;/h2&gt;
 &lt;p&gt;Explore the code below.
