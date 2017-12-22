@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Wed, 20 Dec 2017 22:28:22 GMT</lastBuildDate><item><title><![CDATA[Day 20: Components: What do they know? Do they know things?? Let's Find out!]]></title><description><![CDATA[Smart vs. Dumb components 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Fri, 22 Dec 2017 01:08:20 GMT</lastBuildDate><item><title><![CDATA[Day 21: something I like to call Chrismukkah]]></title><description><![CDATA[Welcome to the (H)OC I’m gonna level with you, I don’t know to explain higher-order components to you.
+I work in analogies and there just…]]></description><link>https://react.holiday/2017/21/</link><guid isPermaLink="false">https://react.holiday/2017/21/</guid><pubDate>Thu, 21 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;h2&gt;Welcome to the (H)OC&lt;/h2&gt;
+&lt;p&gt;I’m gonna level with you, I don’t know to explain higher-order components to you.
+I work in analogies and there just isn’t one for HOCs.&lt;/p&gt;
+&lt;p&gt;HOCs are like bacon-wrapped dates, where bacon is functions and dates are components, and bacon harvests dates for the wrapped dates to shove inside themselv…&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WHAT DA?!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Yeah, no good analogies. &lt;a href=&quot;https://reactjs.org/docs/higher-order-components.html&quot;&gt;Read the docs&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;The good news&lt;/h2&gt;
+&lt;p&gt;The good news is that most HOCs share a basic skeleton.&lt;/p&gt;
+&lt;p&gt;Using our language from &lt;a href=&quot;/2017/20&quot;&gt;yesterday&lt;/a&gt;,
+here’s a HOC named &lt;code&gt;withKnowledge&lt;/code&gt;.&lt;/p&gt;
+&lt;style&gt;
+  .short-code code { line-height: 1em }
+&lt;/style&gt;
+&lt;div class=&quot;short-code&quot;&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;withKnowledge&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;UnkowingComponent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;KnowingComponent&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Component&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; knowledge&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Things I know&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;UnkowingComponent
+          &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+          knowledge&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;knowledge&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;code&gt;withKnowleding&lt;/code&gt; wraps our &lt;strong&gt;knowing&lt;/strong&gt; component in a function that takes an &lt;strong&gt;unknowing&lt;/strong&gt; component as an argument and &lt;strong&gt;smooshes&lt;/strong&gt; them together.&lt;/p&gt;
+&lt;p&gt;Bring your own “knowledge” and you know everything you need to about HOCs.&lt;/p&gt;
+&lt;h2&gt;Why HOCs are hard to understand&lt;/h2&gt;
+&lt;p&gt;Like &lt;a href=&quot;https://www.youtube.com/watch?v=T9C-H_UvbUg&quot;&gt;Chrismukkah&lt;/a&gt;, it’s just too many things.&lt;/p&gt;
+&lt;p&gt;Components don’t have the same composition mechanics as functions.
+So, higher-order components are really high-order component factories.
+Now that’s two concepts you’de have trouble explaining at a dinner party.
+These components are composed outside of &lt;code&gt;render&lt;/code&gt;, so dev tools kinda shit the bed.
+The artifact is your component wrapped in another component with opaque internals.
+And when they aren’t assigned to intermediate variables, you have to use &lt;code&gt;React.createElement&lt;/code&gt; instead of JSX.&lt;/p&gt;
+&lt;p&gt;Too many things.&lt;/p&gt;
+&lt;h2&gt;Why though?&lt;/h2&gt;
+&lt;p&gt;Higher-order components are another way of &lt;a href=&quot;/2017/18&quot;&gt;uncoupling&lt;/a&gt; components.
+Many popular libraries use them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Explore the code below.
+I’ve used the higher-order component pattern to &lt;strong&gt;uncouple&lt;/strong&gt; &lt;code&gt;FetchPokemon&lt;/code&gt; from &lt;code&gt;Pokemon&lt;/code&gt;.
+It’s now &lt;code&gt;withPokemon()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Can you change it to use a &lt;strong&gt;render prop&lt;/strong&gt;?
+Which do you prefer?&lt;/p&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/1q7mqxlqj3&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 20: Components: What do they know? Do they know things?? Let's Find out!]]></title><description><![CDATA[Smart vs. Dumb components 
 is a dichotomy that has dominated the React conversation as long as React has
 existed. Here’s the nut:  Some…]]></description><link>https://react.holiday/2017/20/</link><guid isPermaLink="false">https://react.holiday/2017/20/</guid><pubDate>Wed, 20 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0&quot;&gt;Smart vs. Dumb components&lt;/a&gt;
