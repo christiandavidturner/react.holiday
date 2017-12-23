@@ -1,4 +1,112 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Fri, 22 Dec 2017 01:20:57 GMT</lastBuildDate><item><title><![CDATA[Day 21: something I like to call Chrismukkah]]></title><description><![CDATA[Welcome to the (H)OC I’m gonna level with you, I don’t know to explain higher-order components to you.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Sat, 23 Dec 2017 19:28:05 GMT</lastBuildDate><item><title><![CDATA[Day 24: ...]]></title><description><![CDATA[Tinker with it Use the workspace below and explore …]]></description><link>https://react.holiday/2017/24/</link><guid isPermaLink="false">https://react.holiday/2017/24/</guid><pubDate>Sun, 24 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and explore …&lt;/p&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/42k57pom0w&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 23: ...and ACTION!]]></title><description><![CDATA[IdPager  knows too much. It knows how to manage an  id   and  display buttons. Pager Duty Let’s pass the actions into  this.props.render…]]></description><link>https://react.holiday/2017/23/</link><guid isPermaLink="false">https://react.holiday/2017/23/</guid><pubDate>Sat, 23 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;&lt;code&gt;IdPager&lt;/code&gt; knows too much. It knows how to manage an &lt;code&gt;id&lt;/code&gt; &lt;strong&gt;and&lt;/strong&gt; display buttons.&lt;/p&gt;
+&lt;h2&gt;Pager Duty&lt;/h2&gt;
+&lt;p&gt;Let’s pass the actions into &lt;code&gt;this.props.render&lt;/code&gt; with the &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;I like putting them in an object.
+It lets me add and remove actions without impacting the &lt;a href=&quot;https://en.wikipedia.org/wiki/Arity&quot;&gt;number of arguments&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;short-code&quot;&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    increment&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; id &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    decrement&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; id &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;Now—for us—those button components move up to our root &lt;code&gt;ReactDOM.render()&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Design at will&lt;/h2&gt;
+&lt;p&gt;Now that &lt;code&gt;IdPager&lt;/code&gt; exposes actions, the implementation is up to the developer using it. Instead of the default buttons we used, they can get creative!&lt;/p&gt;
+&lt;div class=&quot;short-code&quot;&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;render&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; actions&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt;
+      &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;fancy-button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;actions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;decrement&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Previous&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and explore actions in &lt;a href=&quot;/2017/19&quot;&gt;render props&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add an action. Maybe a &lt;code&gt;Start over&lt;/code&gt; button that goes back to &lt;code&gt;1&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Show you colors and add some style!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/ly29ro7okl&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 22: A sensible default]]></title><description><![CDATA[Our  withPokemon  HOC is mostly reusable. But it displays that static
+ loading...  message. Let’s make that replaceable. Components over…]]></description><link>https://react.holiday/2017/22/</link><guid isPermaLink="false">https://react.holiday/2017/22/</guid><pubDate>Fri, 22 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;Our &lt;code&gt;withPokemon&lt;/code&gt; HOC is mostly reusable. But it displays that static
+&lt;code&gt;loading...&lt;/code&gt; message.&lt;/p&gt;
+&lt;p&gt;Let’s make that replaceable.&lt;/p&gt;
+&lt;h2&gt;Components over configuration&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;defaultProps&lt;/code&gt; API is one of my favorites. Use it to provide sensible
+defaults for your components.&lt;/p&gt;
+&lt;p&gt;For &lt;code&gt;withPokemon&lt;/code&gt;, we should always indicate that the component is doing work.
+But we should make make the message configurable.&lt;/p&gt;
+&lt;p&gt;We know that props can be components. So lets put &lt;code&gt;&amp;#x3C;div&gt;loading...&amp;#x3C;/div&gt;&lt;/code&gt; in
+&lt;code&gt;defaultProps&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;short-code&quot;&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FetchPokemon&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Component&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+FetchPokemon&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;defaultProps &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  renderLoading&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;loading&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;em&gt;(Yes, this works with component &lt;a href=&quot;/2017/3&quot;&gt;functions&lt;/a&gt; and &lt;a href=&quot;/2017/5&quot;&gt;classes&lt;/a&gt;
+alike.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Now we update &lt;code&gt;render()&lt;/code&gt; and anyone on the team can use any loading component
+they want.&lt;/p&gt;
+&lt;div class=&quot;short-code&quot;&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;character &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Component&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;character&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;character&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;renderLoading
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Future syntax&lt;/h2&gt;
+&lt;p&gt;CodeSandbox and
+&lt;a href=&quot;https://github.com/facebookincubator/create-react-app&quot;&gt;create-react-app&lt;/a&gt;
+provide syntactic sugar for &lt;code&gt;defaultProps&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FetchPokemon&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Component&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; defaultProps &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    renderLoading&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;loading&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;It reduces redundant typing but only for &lt;a href=&quot;/2017/5&quot;&gt;class components&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;Use the workspace below and explore &lt;code&gt;defaultProps&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Change &lt;code&gt;static defaultProps&lt;/code&gt; to today’s syntax and back again.&lt;/li&gt;
+&lt;li&gt;Change &lt;code&gt;renderLoading&lt;/code&gt; to use a &lt;a href=&quot;/2017/18&quot;&gt;render prop&lt;/a&gt;. What changes in
+&lt;code&gt;render()&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;Create a new &lt;a href=&quot;/2017/3&quot;&gt;functional component&lt;/a&gt; named &lt;code&gt;Loading&lt;/code&gt; and use it in
+&lt;code&gt;defaultProps&lt;/code&gt;. What changes in &lt;code&gt;render()&lt;/code&gt;?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/r06lvnjjvo&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 21: something I like to call Chrismukkah]]></title><description><![CDATA[Welcome to the (H)OC I’m gonna level with you, I don’t know to explain higher-order components to you.
 I work in analogies and there just…]]></description><link>https://react.holiday/2017/21/</link><guid isPermaLink="false">https://react.holiday/2017/21/</guid><pubDate>Thu, 21 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;h2&gt;Welcome to the (H)OC&lt;/h2&gt;
 &lt;p&gt;I’m gonna level with you, I don’t know to explain higher-order components to you.
@@ -720,7 +828,7 @@ So don’t read today’s lesson without coming back for &lt;a href=&quot;/2017/
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;br /&gt;
-&lt;p&gt;This is a &lt;a href=&quot;2017/5&quot;&gt;special power&lt;/a&gt; our components get by extending &lt;code&gt;React.Component&lt;/code&gt;.&lt;br&gt;
+&lt;p&gt;This is a &lt;a href=&quot;/2017/5&quot;&gt;special power&lt;/a&gt; our components get by extending &lt;code&gt;React.Component&lt;/code&gt;.&lt;br&gt;
 When called, &lt;code&gt;setState&lt;/code&gt; updates the local &lt;code&gt;state&lt;/code&gt; object and re-renders the component.&lt;/p&gt;
 &lt;h2&gt;Set state statically&lt;/h2&gt;
 &lt;p&gt;Continue &lt;a href=&quot;/2017/7&quot;&gt;yesterday’s&lt;/a&gt; example and replace the &lt;code&gt;alert&lt;/code&gt; with a proper state change.&lt;/p&gt;
@@ -1096,7 +1204,7 @@ each platform has a partner library.&lt;/p&gt;
 &lt;iframe src=&quot;https://codesandbox.io/embed/l396jqvnoz&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden; border: 1px solid black&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[About]]></title><description><![CDATA[Why? ¯ _ (ツ)_/¯ I like holidays.
 I like helping people.
 I think most React education is pathologically complicated. This is a condensed…]]></description><link>https://react.holiday/about/</link><guid isPermaLink="false">https://react.holiday/about/</guid><pubDate>Fri, 01 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
-This is a React advent thingy; the whole 25 days, 25 lessons deal.
+This is a React advent thingy; the whole 24 days, 24 lessons deal.
 &lt;h3&gt;Why?&lt;/h3&gt;
 &lt;p&gt;¯_(ツ)_/¯&lt;/p&gt;
 &lt;p&gt;I like holidays.
