@@ -1,8 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Sat, 23 Dec 2017 19:28:05 GMT</lastBuildDate><item><title><![CDATA[Day 24: ...]]></title><description><![CDATA[Tinker with it Use the workspace below and explore …]]></description><link>https://react.holiday/2017/24/</link><guid isPermaLink="false">https://react.holiday/2017/24/</guid><pubDate>Sun, 24 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Sun, 24 Dec 2017 21:14:51 GMT</lastBuildDate><item><title><![CDATA[Day 24: Move fast and break things]]></title><description><![CDATA[If you click any of the buttons in our app  really fast , you’ll see this error. We call  setState  inside the asynchronous  fetch .
+All…]]></description><link>https://react.holiday/2017/24/</link><guid isPermaLink="false">https://react.holiday/2017/24/</guid><pubDate>Sun, 24 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;p&gt;If you click any of the buttons in our app &lt;em&gt;really fast&lt;/em&gt;, you’ll see this error.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/unmounted-component-warning-863f6e1fbe9c13349cc5e882d709b8e8-754f7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 19.25566343042071%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAuUlEQVQY0zVQWxKCMAyEESilQFu8hT86vsAHioiM3P9AMRvhI5PdzSZNGnyco0ee0zXL5qwF342hV1mKdmPecn4W//pFa8aFaPCAYw5wMFWVNCGP3lHHRhQ7aTA0WEvTuqKBtTfjL/t6W8qD8A3Oij56L4ODY5JQk6bUsqHmDH5SCZ2VEgMCvJ49DfNDHNM2WrGuaM94F0VSl4FYs+eAgK1wLjBOwqlowqbLd8CzXIIB2A4z8B2bMKQfElJpyRNuA/UAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Warning: Can only update a mounted or mounting component. This usually means you called setState, replaceState, or forceUpdate on an unmounted component. This is a no-op.&quot;
+        title=&quot;&quot;
+        src=&quot;/static/unmounted-component-warning-863f6e1fbe9c13349cc5e882d709b8e8-42603.png&quot;
+        srcset=&quot;/static/unmounted-component-warning-863f6e1fbe9c13349cc5e882d709b8e8-f931c.png 200w,
+/static/unmounted-component-warning-863f6e1fbe9c13349cc5e882d709b8e8-e8031.png 400w,
+/static/unmounted-component-warning-863f6e1fbe9c13349cc5e882d709b8e8-42603.png 800w,
+/static/unmounted-component-warning-863f6e1fbe9c13349cc5e882d709b8e8-5b8b9.png 1200w,
+/static/unmounted-component-warning-863f6e1fbe9c13349cc5e882d709b8e8-754f7.png 1236w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;We call &lt;code&gt;setState&lt;/code&gt; inside the asynchronous &lt;code&gt;fetch&lt;/code&gt;.
+All works if our component is around to get updated but, when we click faster than the request can resolve, the component that requested it isn’t around to be updated.&lt;/p&gt;
+&lt;p&gt;Our app has put another component there.&lt;/p&gt;
+&lt;h2&gt;Clean up your shit, Todd!&lt;/h2&gt;
+&lt;p&gt;When we see this error, it means we did setup that we need to clean up.
+We do cleanup in the &lt;a href=&quot;https://reactjs.org/docs/react-component.html#componentwillunmount&quot;&gt;componentWillUnmount&lt;/a&gt; lifecycle method.&lt;/p&gt;
+&lt;p&gt;In &lt;code&gt;FetchPokemon&lt;/code&gt; component needs to &lt;code&gt;cancel&lt;/code&gt; the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;Promise&lt;/a&gt; returned by &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API&quot;&gt;fetch&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Maybe next year…&lt;/h2&gt;
+&lt;p&gt;I’ve updated the code below but cancellable &lt;code&gt;fetch&lt;/code&gt; is a whole thing and I’ve got eggnog to drink.&lt;/p&gt;
+&lt;p&gt;As always—the, the &lt;a href=&quot;https://reactjs.org/&quot;&gt;React Docs&lt;/a&gt; work for you all year long and there’s a &lt;a href=&quot;https://reactjs.org/blog/2015/12/16/ismounted-antipattern.html&quot;&gt;great post on just this topic&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Happy holidays and have a Merry Christmas!&lt;br&gt;
+&lt;br /&gt;
+&lt;span style=&quot;font-size: 2em&quot;&gt;⚛️🌲&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;❤️ &lt;a href=&quot;https://twitter.com/chantastic&quot;&gt;chantastic&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Tinker with it&lt;/h2&gt;
-&lt;p&gt;Use the workspace below and explore …&lt;/p&gt;
 &lt;/div&gt;
-&lt;iframe src=&quot;https://codesandbox.io/embed/42k57pom0w&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 23: ...and ACTION!]]></title><description><![CDATA[IdPager  knows too much. It knows how to manage an  id   and  display buttons. Pager Duty Let’s pass the actions into  this.props.render…]]></description><link>https://react.holiday/2017/23/</link><guid isPermaLink="false">https://react.holiday/2017/23/</guid><pubDate>Sat, 23 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;iframe src=&quot;https://codesandbox.io/embed/5jq2p08xl&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Day 23: ...and ACTION!]]></title><description><![CDATA[IdPager  knows too much. It knows how to manage an  id   and  display buttons. Pager Duty Let’s pass the actions into  this.props.render…]]></description><link>https://react.holiday/2017/23/</link><guid isPermaLink="false">https://react.holiday/2017/23/</guid><pubDate>Sat, 23 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;&lt;code&gt;IdPager&lt;/code&gt; knows too much. It knows how to manage an &lt;code&gt;id&lt;/code&gt; &lt;strong&gt;and&lt;/strong&gt; display buttons.&lt;/p&gt;
 &lt;h2&gt;Pager Duty&lt;/h2&gt;
 &lt;p&gt;Let’s pass the actions into &lt;code&gt;this.props.render&lt;/code&gt; with the &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;
