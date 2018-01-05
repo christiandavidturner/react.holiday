@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Sun, 24 Dec 2017 21:14:51 GMT</lastBuildDate><item><title><![CDATA[Day 24: Move fast and break things]]></title><description><![CDATA[If you click any of the buttons in our app  really fast , you’ll see this error. We call  setState  inside the asynchronous  fetch .
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React 🎄]]></title><description><![CDATA[A React advent for nerds and n00bs.]]></description><link>https://react.holiday</link><generator>RSS for Node</generator><lastBuildDate>Fri, 05 Jan 2018 08:53:40 GMT</lastBuildDate><item><title><![CDATA[Day 25: Tinker with it]]></title><description><![CDATA[Tinker with it You did great. I’m proud of you for sticking with it to the end. If you made it through, you have all the essential knowledge…]]></description><link>https://react.holiday/2017/25/</link><guid isPermaLink="false">https://react.holiday/2017/25/</guid><pubDate>Mon, 25 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
+&lt;h2&gt;Tinker with it&lt;/h2&gt;
+&lt;p&gt;You did great. I’m proud of you for sticking with it to the end.&lt;/p&gt;
+&lt;p&gt;If you made it through, you have all the essential knowledge you need to be a
+great React developer. The rest is practice.&lt;/p&gt;
+&lt;p&gt;Take it easy today. 2018 has great things in store for you. I’m excited to see
+what you make.&lt;/p&gt;
+&lt;p&gt;💖 @chantastic&lt;/p&gt;
+&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Day 24: Move fast and break things]]></title><description><![CDATA[If you click any of the buttons in our app  really fast , you’ll see this error. We call  setState  inside the asynchronous  fetch .
 All…]]></description><link>https://react.holiday/2017/24/</link><guid isPermaLink="false">https://react.holiday/2017/24/</guid><pubDate>Sun, 24 Dec 2017 12:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;measure&quot;&gt;
 &lt;p&gt;If you click any of the buttons in our app &lt;em&gt;really fast&lt;/em&gt;, you’ll see this error.&lt;/p&gt;
 &lt;p&gt;
